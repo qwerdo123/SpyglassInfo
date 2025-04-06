@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpyGlassInfo", "SpyGlassInfo\SpyGlassInfo.csproj", "{DA40CA9E-4F8B-40A7-AD07-4138900E4998}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CakeBuild", "ZZCakeBuild\CakeBuild.csproj", "{295BBADE-4D43-49E0-8E95-2FB6109AF614}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA40CA9E-4F8B-40A7-AD07-4138900E4998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA40CA9E-4F8B-40A7-AD07-4138900E4998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA40CA9E-4F8B-40A7-AD07-4138900E4998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA40CA9E-4F8B-40A7-AD07-4138900E4998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{295BBADE-4D43-49E0-8E95-2FB6109AF614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{295BBADE-4D43-49E0-8E95-2FB6109AF614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{295BBADE-4D43-49E0-8E95-2FB6109AF614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{295BBADE-4D43-49E0-8E95-2FB6109AF614}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77ECB713-64B4-4A0E-B1F5-205EDA651B5A}
+	EndGlobalSection
+EndGlobal

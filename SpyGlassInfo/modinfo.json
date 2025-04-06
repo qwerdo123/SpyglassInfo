@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "spyglassinfo",
+    "name": "Spylass Info",
+    "authors": [
+        "Qwerdo"
+    ],
+    "description": "Shows info at long range when using a spyglass.",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": "", "spyglass": ""
+    }
+}

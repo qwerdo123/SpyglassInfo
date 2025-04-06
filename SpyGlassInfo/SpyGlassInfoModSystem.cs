@@ -15,7 +15,6 @@ namespace SpyGlassInfo
     {
         public static ICoreAPI api;
         public Harmony harmony;
-        static float previousPickingRange = 0f;
         public override void Start(ICoreAPI api)
         {
             SpyGlassInfoModSystem.api = api;
@@ -32,9 +31,7 @@ namespace SpyGlassInfo
         {
             api.Logger.Notification("debug start");
             if (byEntity is not EntityPlayer playerEntity) return;
-            previousPickingRange = playerEntity.Player.WorldData.PickingRange;
             playerEntity.Player.WorldData.PickingRange = 1000;
-
 
         }
 
@@ -44,10 +41,25 @@ namespace SpyGlassInfo
         {
             api.Logger.Notification("debug stop");
             if (byEntity is not EntityPlayer playerEntity) return;
+            
+            if(playerEntity.Player.WorldData.CurrentGameMode == EnumGameMode.Survival)
+            {
+                playerEntity.Player.WorldData.PickingRange = GlobalConstants.DefaultPickingRange;
+            }
+            else if (playerEntity.Player.WorldData.CurrentGameMode == EnumGameMode.Creative)
+            {
+                playerEntity.Player.WorldData.PickingRange = 1000;
 
-            playerEntity.Player.WorldData.PickingRange = previousPickingRange;
+            }
 
 
+        }
+        [HarmonyPrefix]
+        [HarmonyPatch("spyglass.src.ItemSpyglass", "GetHeldInteractionHelp")]
+        public static void CheckMouseButtons()
+        {
+            api.Logger.Notification("debug mousebutton");
+            
         }
     }
 }

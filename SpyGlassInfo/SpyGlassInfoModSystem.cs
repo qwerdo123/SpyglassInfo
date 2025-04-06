@@ -29,7 +29,6 @@ namespace SpyGlassInfo
         [HarmonyPatch("spyglass.src.ItemSpyglass", "OnHeldInteractStart")]
         public static void IncreaseRange(EntityAgent byEntity)
         {
-            api.Logger.Notification("debug start");
             if (byEntity is not EntityPlayer playerEntity) return;
             playerEntity.Player.WorldData.PickingRange = 1000;
 
@@ -39,7 +38,6 @@ namespace SpyGlassInfo
         [HarmonyPatch("spyglass.src.ItemSpyglass", "OnHeldInteractStop")]
         public static void ResetRange(EntityAgent byEntity)
         {
-            api.Logger.Notification("debug stop");
             if (byEntity is not EntityPlayer playerEntity) return;
             
             if(playerEntity.Player.WorldData.CurrentGameMode == EnumGameMode.Survival)
